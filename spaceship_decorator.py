@@ -9,24 +9,24 @@ class SpaceshipDecorator(ISpaceship, ABC):
         self._spaceship = spaceship
 
     @override
-    def attack_get(self) -> int:
-        return self._spaceship.attack_get()
+    def get_attack(self) -> int:
+        return self._spaceship.get_attack()
 
     @override
-    def defense_get(self) -> int:
-        return self._spaceship.defense_get()
+    def get_defense(self) -> int:
+        return self._spaceship.get_defense()
 
     @abstractmethod
-    def weight_get(self) -> int:
+    def get_weight(self) -> int:
         pass
 
     @abstractmethod
-    def details_get(self) -> str:
+    def get_details(self) -> str:
         pass
 
     def __str__(self) -> str:
-        return (f"{self.details_get()} "
-                f"[Attack: {self.attack_get()}, "
-                f"Defense: {self.defense_get()}, "
-                f"Weight: {self.weight_get()}]")
+        return (f"{self.get_details()} "
+                f"[Attack: {self.get_attack()}, "
+                f"Defense: {self.get_defense()}, "
+                f"Weight: {self.get_weight()}]")
 

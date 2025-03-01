@@ -12,13 +12,13 @@ class ShieldDecorator(SpaceshipDecorator):
         self.extra_weight = extra_weight
 
     @override
-    def defense_get(self) -> int:
-        return self._spaceship.defense_get() + self.extra_defense
+    def get_defense(self) -> int:
+        return self._spaceship.get_defense() + self.extra_defense
 
     @override
-    def weight_get(self) -> int:
-        return self._spaceship.weight_get() + self.extra_weight
+    def get_weight(self) -> int:
+        return self._spaceship.get_weight() + self.extra_weight
 
     @override
-    def details_get(self) -> str:
-        return f"{self._spaceship.details_get()}, {self.shield_name}"
+    def get_details(self) -> str:
+        return f"{self._spaceship.get_details()}, {self.shield_name}"

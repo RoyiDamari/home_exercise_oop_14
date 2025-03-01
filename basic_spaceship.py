@@ -9,23 +9,23 @@ class BasicSpaceship(ISpaceship):
         self._weight = 100
 
     @override
-    def attack_get(self) -> int:
+    def get_attack(self) -> int:
         return self._attack
 
     @override
-    def defense_get(self) -> int:
+    def get_defense(self) -> int:
         return self._defense
 
     @override
-    def weight_get(self) -> int:
+    def get_weight(self) -> int:
         return self._weight
 
     @override
-    def details_get(self) -> str:
+    def get_details(self) -> str:
         return "BasicSpaceship"
 
     def __str__(self) -> str:
-        return (f"{self.details_get()} "
-                f"[Attack: {self.attack_get()}, "
-                f"Defense: {self.defense_get()}, "
-                f"Weight: {self.weight_get()}]")
+        return (f"{self.get_details()} "
+                f"[Attack: {self.get_attack()}, "
+                f"Defense: {self.get_defense()}, "
+                f"Weight: {self.get_weight()}]")

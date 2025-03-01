@@ -12,13 +12,13 @@ class WeaponDecorator(SpaceshipDecorator):
         self.extra_weight = extra_weight
 
     @override
-    def attack_get(self) -> int:
-        return self._spaceship.attack_get() + self.extra_attack
+    def get_attack(self) -> int:
+        return self._spaceship.get_attack() + self.extra_attack
 
     @override
-    def weight_get(self) -> int:
-        return self._spaceship.weight_get() + self.extra_weight
+    def get_weight(self) -> int:
+        return self._spaceship.get_weight() + self.extra_weight
 
     @override
-    def details_get(self) -> str:
-        return f"{self._spaceship.details_get()}, {self.weapon_name}"
+    def get_details(self) -> str:
+        return f"{self._spaceship.get_details()}, {self.weapon_name}"
